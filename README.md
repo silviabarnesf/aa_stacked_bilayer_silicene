@@ -45,18 +45,6 @@ The simulation workflow is:
 * NumPy
 * Matplotlib
 
-Install dependencies:
-
-```bash
-pip install numpy matplotlib
-```
-
-Run:
-
-```bash
-python main.py
-```
-
 #### Key Findings
 
 * Interlayer coupling strongly affects band splitting
