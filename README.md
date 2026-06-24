@@ -1,67 +1,71 @@
-## AA-Stacked Silicene: Tight-Binding Band Structure Under Electric Fields
+## AA-Stacked Bilayer Silicene: Tight-Binding Band Structure Under Electric Fields
 
-#### Abstract
+This project investigates the electronic band structure of AA-stacked bilayer silicene using a tight-binding model. The simulation explores how interlayer coupling and external electric fields modify the energy spectrum, with visualizations of band dispersion along high-symmetry paths and across two-dimensional regions of k-space.
 
-This project presents a tight-binding computational study of AA-stacked silicene, focusing on its electronic band structure under both uniform and spatially modulated electric fields. Using a 4×4 Hamiltonian including intralayer and interlayer hopping terms, we compute energy bands along high-symmetry paths in the Brillouin zone and visualize band dispersion and k-space energy landscapes.
+#### Key Features
 
----
-#### 1. Introduction
+* 4×4 tight-binding Hamiltonian for AA-stacked bilayer silicene
+* Intralayer and interlayer hopping interactions
+* Uniform and spatially modulated electric field perturbations
+* Band structure calculations along Γ → M → K → Γ
+* 2D energy dispersion and contour visualizations near the K point
 
-Silicene, a two-dimensional allotrope of silicon with a honeycomb lattice, exhibits graphene-like electronic properties with enhanced spin-orbit coupling and tunable band structure. In this work, we extend a tight-binding model to an AA-stacked bilayer configuration and investigate the effect of external electric fields on its electronic spectrum.
+#### Results
 
----
-#### 2. Model Description
+![Field-Free Band Structure](results/field_free_band_structure.png)
 
-The system is modeled as a honeycomb lattice with lattice constant a = 2.28 Å. We consider AA stacking, where each atom in layer 1 is aligned vertically with its counterpart in layer 2. The Tight-Binding Hamiltonian includes:
+![Uniform Electric Field](results/uniform_field_band_structure.png)
 
-- Intralayer hopping (t₀)
-- Interlayer vertical hopping (t₁)
-- Interlayer skew hopping (t₂)
+![Periodic Electric Field](results/periodic_field_band_structure.png)
 
-The system is described by a 4×4 Hamiltonian in the basis: (A1, B1, A2, B2). The Bloch Hamiltonian depends on the structure factor: f(k) = Σ exp(i k · δᵢ) where δᵢ are nearest-neighbor vectors.
+![3D Band Structure](results/band_structure_3D.png)
 
----
-#### 3. Electric Field Effects
+![Contour Map](results/contour_map.png)
 
-We consider two types of external perturbations: a uniform electric field (a constant on-site potential: V₀ applied equally to all sublattices), and a periodic electric field (a spatially modulated field: V(k) = V₀ cos(q · k), introducing k-dependent band modulation). 
+#### Physical Model
 
----
-#### 4. Computational Methods
+The system is modeled as AA-stacked bilayer silicene, where atoms in the upper layer are aligned vertically with atoms in the lower layer. The Hamiltonian includes intralayer hopping (t₀); vertical interlayer hopping (t₁); and skew interlayer hopping (t₂). The basis states are: (A₁, B₁, A₂, B₂). Band energies are obtained by diagonalizing the Bloch Hamiltonian throughout the Brillouin zone.
 
-Band structures are computed by:
+#### Electric Field Effects
 
-1. Constructing H(k) on a 4×4 basis
-2. Diagonalizing using numpy.linalg.eigvalsh
-3. Sampling k-points along high-symmetry paths: Γ → M → K → Γ
-4. Extending analysis to full k-space grids around K
+Two types of external perturbations are considered: a uniform electric field (a constant on-site potential is applied to all lattice sites, producing an overall shift in the electronic bands) and a periodic electric field (a spatially modulated potential V(k) = V₀ cos(q·k) introduces momentum-dependent band modulation and modifies the symmetry of the spectrum).
 
----
-#### 5. Results
+#### Computational Methods
 
-The model produces four energy bands corresponding to bilayer sublattice degrees of freedom. We compute full 2D dispersion around the K point, revealing band splitting due to interlayer coupling and anisotropic curvature near Dirac points. The main effects due to the electric fields are:
+The simulation workflow is:
 
-- Uniform field shifts all bands rigidly
-- Periodic field introduces k-dependent band modulation and symmetry breaking
+1. Construct the tight-binding Hamiltonian H(k)
+2. Sample k-points along high-symmetry paths
+3. Diagonalize using NumPy eigenvalue solvers
+4. Generate band structure and k-space visualizations
 
----
-#### 6. Key Findings
+#### Requirements
 
-- Interlayer coupling (t₁, t₂) significantly modifies band splitting
-- Electric fields introduce tunability in band structure
-- AA stacking preserves high symmetry but lifts degeneracies
+* Python 3.x
+* NumPy
+* Matplotlib
 
----
-#### 7. Tools
+Install dependencies:
 
-- Python
-- NumPy
-- Matplotlib
+```bash
+pip install numpy matplotlib
+```
 
----
-#### 8. Conclusion
-This work provides a computational framework for studying AA-stacked silicene under external fields using a tight-binding approach. The results highlight the tunability of electronic structure via interlayer coupling and external perturbations, relevant for 2D material engineering.
+Run:
 
----
-#### Acknowledgements
+```bash
+python main.py
+```
 
-Undergraduate Computational Physics coursework in condensed matter theory.
+#### Key Findings
+
+* Interlayer coupling strongly affects band splitting
+* External electric fields provide tunable control of the electronic spectrum
+* AA stacking preserves lattice symmetry while modifying degeneracies
+* Periodic fields induce momentum-dependent band modulation
+
+#### Author
+
+Silvia Barnes Franco
+
+Undergraduate Computational Physics Project
