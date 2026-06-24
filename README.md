@@ -66,6 +66,6 @@ python main.py
 
 #### Author
 
-Silvia Barnes Franco
+Silvia Barnes
 
-Undergraduate Computational Physics Project
+*Undergraduate Computational Physics Project*
