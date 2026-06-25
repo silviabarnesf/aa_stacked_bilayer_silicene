@@ -30,30 +30,13 @@ The system is modeled as AA-stacked bilayer silicene, where atoms in the upper l
 
 Two types of external perturbations are considered: a uniform electric field (a constant on-site potential is applied to all lattice sites, producing an overall shift in the electronic bands) and a periodic electric field (a spatially modulated potential V(k) = V₀ cos(q·k) introduces momentum-dependent band modulation and modifies the symmetry of the spectrum).
 
-#### Computational Methods
-
-The simulation workflow is:
-
-1. Construct the tight-binding Hamiltonian H(k)
-2. Sample k-points along high-symmetry paths
-3. Diagonalize using NumPy eigenvalue solvers
-4. Generate band structure and k-space visualizations
-
 #### Requirements
 
 * Python 3.x
 * NumPy
 * Matplotlib
 
-#### Key Findings
-
-* Interlayer coupling strongly affects band splitting
-* External electric fields provide tunable control of the electronic spectrum
-* AA stacking preserves lattice symmetry while modifying degeneracies
-* Periodic fields induce momentum-dependent band modulation
-
 #### Author
 
 Silvia Barnes
-
 *Undergraduate Computational Physics Project*
