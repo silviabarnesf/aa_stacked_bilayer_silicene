@@ -8,7 +8,7 @@ This project investigates the electronic band structure of AA-stacked bilayer si
 * Intralayer and interlayer hopping interactions
 * Uniform and spatially modulated electric field perturbations
 * Band structure calculations along Γ → M → K → Γ
-* 2D energy dispersion and contour visualizations near the K point
+* 3D energy dispersion and contour visualizations near the K point
 
 #### Results
 
