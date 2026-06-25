@@ -39,4 +39,5 @@ Two types of external perturbations are considered: a uniform electric field (a 
 #### Author
 
 Silvia Barnes
+
 *Undergraduate Computational Physics Project*
