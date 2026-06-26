@@ -10,18 +10,6 @@ This project investigates the electronic band structure of AA-stacked bilayer si
 * Band structure calculations along Γ → M → K → Γ
 * 3D energy dispersion and contour visualizations near the K point
 
-#### Results
-
-![Field-Free Band Structure](results/field_free_band_structure.png)
-
-![Uniform Electric Field](results/uniform_field_band_structure.png)
-
-![Periodic Electric Field](results/periodic_field_band_structure.png)
-
-![3D Band Structure](results/band_structure_3D.png)
-
-![Contour Map](results/contour_map.png)
-
 #### Physical Model
 
 The system is modeled as AA-stacked bilayer silicene, where atoms in the upper layer are aligned vertically with atoms in the lower layer. The Hamiltonian includes intralayer hopping (t₀); vertical interlayer hopping (t₁); and skew interlayer hopping (t₂). The basis states are: (A₁, B₁, A₂, B₂). Band energies are obtained by diagonalizing the Bloch Hamiltonian throughout the Brillouin zone.
